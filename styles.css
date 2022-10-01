@@ -1,0 +1,184 @@
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 250ms;
+}
+
+html {
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
+}
+
+body {
+    background-color: var(--very-dark-blue);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    width: 420px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 10.5rem;
+}
+
+section {
+    padding: 2rem 2.3rem;
+    border-radius: 1.5rem;
+    background-color: hsl(216, 15%, 13%);
+    position: absolute;
+    transition: 420ms;
+}
+
+section:first-child>h1 {
+    color: var(--white);
+    font-size: 2rem;
+    margin-bottom: 0.35em;
+}
+
+section:first-child>p {
+    color: var(--light-grey);
+    line-height: 1.5;
+    margin-bottom: 2em;
+}
+
+.icon {
+    background-color: var(--dark-blue);
+    height: 46px;
+    width: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100vh;
+    margin-bottom: 2em;
+}
+
+.input-field {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.75em;
+}
+
+.input-field>input {
+    background-color: var(--dark-blue);
+    color: var(--light-grey);
+    font-family: 'Overpass', sans-serif;
+    border: none;
+    width: 52px;
+    height: 52px;
+    font-size: 1.15rem;
+    border-radius: 50%;
+}
+
+.input-field>input:hover {
+    color: var(--white);
+    background-color: var(--orange);
+}
+
+.active-state {
+    background-color: var(--medium-grey) !important;
+    color: var(--white) !important;
+}
+
+button {
+    font-family: 'Overpass', sans-serif;
+    font-size: 1.05rem;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 2.25em;
+    padding: 0.75em 0;
+    text-transform: uppercase;
+    background-color: var(--orange);
+    color: var(--white);
+    width: 100%;
+    cursor: pointer;
+}
+
+button:hover {
+    color: var(--orange);
+    background-color: var(--white);
+}
+
+section:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--white);
+    text-align: center;
+    padding: 3em 2.25rem;
+    transform: translateY(200%);
+    opacity: 0;
+}
+
+section:last-child img {
+    margin-bottom: 1.75em;
+}
+
+section:last-child p:first-of-type {
+    color: var(--orange);
+    padding: 0.25em 1.25em;
+    background-color: var(--dark-blue);
+    border-radius: 1em;
+    opacity: 0.8;
+    font-size: 1.04rem;
+    margin-bottom: 2.25em;
+}
+
+section:last-child p:last-of-type {
+    color: var(--light-grey);
+    line-height: 1.5;
+    font-size: 1.04rem;
+}
+
+section:last-child h1 {
+    font-size: 1.75rem;
+    margin-bottom: 0.75em;
+}
+
+.completed {
+    transform: translateY(-200%);
+    opacity: 0;
+}
+
+.active {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+}
+
+@media screen and (max-width: 420px) {
+    html {
+        font-size: 13px;
+    }
+
+    main {
+        width: 86%;
+    }
+
+    section {
+        padding: 3rem 2rem;
+    }
+
+    .icon {
+        height: 8vw;
+        width: 8vw;
+    }
+
+    .input-field>input {
+        height: 11vw;
+        width: 11vw;
+    }
+}
