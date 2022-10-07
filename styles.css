@@ -23,16 +23,16 @@ html {
 
 body {
     background-color: var(--very-dark-blue);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
 }
 
 main {
     width: 420px;
-    position: relative;
+    height: 410px;
+    position: absolute;
     overflow: hidden;
-    margin-top: 10.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 section {
